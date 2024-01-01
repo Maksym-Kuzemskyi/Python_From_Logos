@@ -10,15 +10,15 @@ class MyClass:
     def get_private_attr(self):
         return self.__private_attr
 
-    def edit_public_attr(self, new_value):
+    def set_public_attr(self, new_value):
         self.public_attr = new_value
         self._write_to_file("Edited public attribute")
 
-    def edit_protected_attr(self, new_value):
+    def set_protected_attr(self, new_value):
         self._protected_attr = new_value
         self._write_to_file("Edited protected attribute")
 
-    def edit_private_attr(self, new_value):
+    def set_private_attr(self, new_value):
         self.__private_attr = new_value
         self._write_to_file("Edited private attribute")
 
@@ -31,10 +31,10 @@ class MyClass:
 obj = MyClass("Public", "Protected", "Private")
 
 # Зміна публічного атрибуту та запис до файлу
-obj.edit_public_attr("New Public Value")
+obj.set_public_attr("New Public Value")
 
 # Зміна захищеного атрибуту та запис до файлу
-obj.edit_protected_attr("New Protected Value")
+obj.set_protected_attr("New Protected Value")
 
 # Зміна приватного атрибуту та запис до файлу
-obj.edit_private_attr("New Private Value")
+obj.set_private_attr("New Private Value")
